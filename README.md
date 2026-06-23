@@ -6,8 +6,9 @@ I  built this responsive weather application using  vanilla HTML5, CSS3, and mod
 This project is fully deployed and can be viewed live via github pages:https://egwuatuchidimma165-web.github.io/Weather-App/
 ## Key Features Implemented
 **Animated weather icons:**Maps Open-Meteo weather codes to specific text emojis.
-**Weather stat section:**
+**Weather stat section:** displays humidity, windspeed and uv index.
 ** 5 day weather forecast  Matrix:**tabular layout with vertically stacked max and min temperature metrics.
+**Mobile Responsiveness Blueprint:**Adapts elements to fit `480px ` screen widths
 
 
 
