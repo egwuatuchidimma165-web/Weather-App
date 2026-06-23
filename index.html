@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale= 1.0"/>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+ <main class="app-container">
+    <!-- App header container-->
+    <header class="app-header">
+<span class="phone-icon">📱 Weather App </span>
+    </header>
+      
+      <!--search box  section-->
+      <section id="searchSection">
+        <input type="text" id="cityInput" placeholder="Enter City Name" />
+        <button id="searchBtn">Search</button>
+      </section>
+
+ <!--Error message-->
+        <p id="errorMessage"></p>
+
+      <!--Hero card display section (current weather)-->
+      <section id="currentWeather" class="hero-card">
+         <p id="weatherIcon" class="hero-icon">🌤️</p>
+        <h3 id="location" class="hero-location">City, Country</h3>
+        <h2 id="temperature" class="hero-temp">Temperature</h2>
+        <div class="hero-details">
+           <span id="description" class="hero-condition">Weather status</span>
+           <span class="hero-divider">&#183;</span>
+           <span id="feelslike" class="hero-feels-like">Feels like --</span>
+        </div>
+      </section>
+    
+      <!--Weather statistics Box-->
+      <section id="weatherStat">
+        <!--Stat box 1:humidity-->
+        <div class="stat-box">
+          <div class="stat-label">Humidity</div>
+          <div id="humidity" class="stat-value"></div>
+        </div>
+
+        <!--Stat-box 2:Wind-->
+        <div class="stat-box">
+          <div class="stat-label">WindSpeed</div>
+          <div id="windSpeed" class="stat-value">--</div>
+        </div>
+
+        <!--Stat-box 3:UV Index-->
+        <div class="stat-box">
+          <div class="stat-label">UV Index</div>
+          <div id="uvIndex" class="stat-value">--</div>
+        </div>
+        </section>
+
+        <!--5-day forecast section-->
+        <section id="forecastSection">
+          <h2 class="forecast-heading">5-DAY FORECAST</h2>
+          
+          <div id="forecastContainer">
+            <!--forecast rows will be created here using JS-->
+          </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

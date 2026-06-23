@@ -1,0 +1,298 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body styling*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f7;
+  color: #333;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/*header styling*/
+header {
+  background-color: #1a3c5e;
+  color: white;
+  padding: 1.3rem;
+  font-weight: bold;
+}
+/*main container styling*/
+.app-container {
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*search section styling*/
+#searchSection {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+}
+
+#searchSection input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+}
+
+#searchSection button {
+  background-color: #2e86ab;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/*button hover effect styling*/
+#searchSection button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/*Error message styling*/
+#errorMessage {
+  color:#d63031;
+  background-color: #ffead0;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 0 12px 10px 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hero section styling i.e current weather card*/
+#currentWeather {
+  background: #2e86ab;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  margin: 12px;
+  padding: 20px 10px;
+}
+/*styling for weather icon*/
+#weatherIcon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* styling for location */
+#location {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/*styling for temperature*/
+#temperature {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#description {
+  font-size: 1rem;
+}
+
+/*styling for weather stat section*/
+#weatherStat {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 15px;
+}
+/*styling for stat-box, stat-label, stat-value*/
+
+.stat-box {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-box:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+.stat-label {
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  column-gap: #1a3c5e;
+}
+
+/*styling for forecast section*/
+#forecastSection {
+  padding: 12px;
+}
+
+.forecast-heading {
+  color: gray;
+  margin-bottom: 12px;
+}
+
+/*styling for forecast row created by Javascript*/
+#forecastContainer {
+  display:flex;
+  flex-direction: column;
+padding: 0 10px;
+  border: 1px ;
+box-sizing: border-box;
+}
+
+.forecast-row {
+background-color: #ffffff;
+display: grid !important;
+grid-template-columns: 1.5fr 1fr 1fr !important; ;
+align-items: center;
+width: 100%;
+color: #1a3c5e;
+border: 1px solid #eeeeee;
+border-radius: 12px;
+padding: 14px 16px;
+margin-bottom: 8px !important;
+box-sizing: border-box !important;
+}
+/*stacking max and min temp*/
+.forecast-row .temp-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column !important;
+
+}
+
+.forecast-row .forecast-icon {
+  font-weight: bold;
+  text-align: left;
+}
+
+.forecast-row .day-name{
+  font-weight: bold;
+  color: #1a3c5e;
+  text-align: left;
+  width:25%
+}
+.forecast-row.max-temp{
+  color: #2c3e50;
+  font-weight: bold !important;
+  font-size: 1rem;
+}
+
+.forecast-row.min-temp{
+   color: #888888;
+   font-size: 0.85rem !important;
+   margin-top: 2px !important;
+}
+
+
+/*error message styling*/
+#errorMessage{
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+/*base styling for hero emoji icon*/
+.weather-icon-hero {
+  display: inline-block !important;
+}
+
+
+/*sun spinning animation for sunny weather*/
+.sunny-animation {
+  animation: spinSun 12s linear infinite;
+}
+@keyframes spinSun {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*general animation for other weather conditions*/
+.general-animation {
+  animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/*media query for mobile responsiveness*/
+@media screen and (max-width: 480px) {
+  body {padding: 10px;
+    background-attachment: fixed;}
+}
+
+/*scale the main app to fit screen width*/
+.app-container {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+}
+
+/*styling for search button  and city input for mobile responsiveness*/
+#searchSection {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+#cityInput {
+  flex: 1;
+  font-size: 1rem;
+}
+/*optimize hero card for mobile responsiveness*/
+#currentWeather.hero-card {
+  width: 100%;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+/*scale font size for mobile responsiveness*/
+.hero-location{
+  font-size: 1.5rem;
+}
+
+.hero-temp {
+  font-size: 2.8rem;
+}
+
+.hero-icon {
+  font-size:3.5rem;
+}
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+.forecast-row {
+  grid-template-columns: 1.2fr 1fr 1fr !important;
+  padding: 10px 12px;
+}
+
+.forecast-row .day-name {font-size: 0.9rem;}
+.forecast-row .forecast-icon{font-size: 1.1rem;}
+.forecast-row .max-temp,
+.forecast-row .min-temp{ font-size: 0.85rem;}
